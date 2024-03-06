@@ -5,7 +5,7 @@ const CreateEmployee = () => {
   return (
     <>
       <h2 className="title">Create Employee</h2>
-      <FormCreateEmployee></FormCreateEmployee>
+      <FormCreateEmployee />
     </>
   )
 }
