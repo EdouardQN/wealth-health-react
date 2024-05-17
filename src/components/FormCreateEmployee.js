@@ -7,6 +7,9 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 //Library used : https://mui.com
 
+import { ConfirmationModal } from 'npm-modal-form-confirm';
+//Plugin npm created
+
 import { states } from '../data/states';
 import { departments } from '../data/departments';
 import { AddEmployee } from '../data/actionsDB';
@@ -75,13 +78,13 @@ export default function FormCreateEmployee() {
         </select>
 
         <input type="submit"/>
-        <Modal
+        {/* <Modal
             open={open}
             onClose={handleClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
         >
-            <Box sx={style}>
+           <Box sx={style}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
                 Create Employee
             </Typography>
@@ -89,8 +92,9 @@ export default function FormCreateEmployee() {
                 Employee sucessfully created
             </Typography>
             </Box>
-        </Modal>
+        </Modal> */}
       </form>
+      <ConfirmationModal  />
     </>
   
   );

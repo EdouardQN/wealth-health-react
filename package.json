@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.20.7",
+    "@babel/plugin-syntax-jsx": "7.24.1",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.10",
@@ -15,6 +17,7 @@
     "ag-grid-react": "^31.0.3",
     "dexie": "^3.2.5",
     "dexie-react-hooks": "^1.1.7",
+    "npm-modal-form-confirm": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.50.0",
