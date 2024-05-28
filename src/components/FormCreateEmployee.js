@@ -2,12 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 //Library used : https://react-hook-form.com/
 
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-//Library used : https://mui.com
-
-import { ConfirmationModal } from 'npm-modal-form-confirm';
+import { ConfirmationModal } from "npm-modalconf-pkg"
 //Plugin npm created
 
 import { states } from '../data/states';
@@ -19,17 +14,6 @@ export default function FormCreateEmployee() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);  
-  const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: '#dddddd',
-    border: '4px solid #307470',
-    boxShadow: 24,
-    p: 4,
-  };
 
   //submit form
   const { register, handleSubmit, reset } = useForm();
@@ -78,23 +62,9 @@ export default function FormCreateEmployee() {
         </select>
 
         <input type="submit"/>
-        {/* <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-        >
-           <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
-                Create Employee
-            </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                Employee sucessfully created
-            </Typography>
-            </Box>
-        </Modal> */}
       </form>
-      <ConfirmationModal  />
+      <ConfirmationModal isOpen={open} onClose={handleClose} />
+      
     </>
   
   );
