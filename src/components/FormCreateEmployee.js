@@ -18,6 +18,7 @@ export default function FormCreateEmployee() {
   //submit form
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) =>  {
+    // console.log(data)
     AddEmployee(data);
     handleOpen();
     reset();
